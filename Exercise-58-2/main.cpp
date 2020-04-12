@@ -2,14 +2,14 @@
 #include <cmath>
 #include <iostream>
 
-static double f(double x)
+static double f(double theta)
 {
     return 1.0 / sqrt(1.0 - pow(cos(theta), 2.0));
 }
 
-static double g(double x)
+static double g(double theta)
 {
-    return 1.0 / sin(x);
+    return 1.0 / sin(theta);
 }
 
 int main()
@@ -18,9 +18,9 @@ int main()
     double const max = 2.0 * 3.141592;
     double const delta = 0.1;
 
-    for (double x = min; x <= max; x += delta)
+    for (double theta = min; theta <= max; theta += delta)
     {
-        auto diff = f(x) - g(x);
+        auto diff = f(theta) - g(theta);
         std::cout << diff << std::endl;
     }
 
