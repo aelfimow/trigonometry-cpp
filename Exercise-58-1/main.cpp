@@ -4,12 +4,12 @@
 
 static double f(double x)
 {
-    return 0.0;
+    return sin(x) / tan(x);
 }
 
 static double g(double x)
 {
-    return 0.0;
+    return cos(x);
 }
 
 int main()
@@ -18,7 +18,7 @@ int main()
     double const max = 2.0 * 3.141592;
     double const delta = 0.1;
 
-    for (double x = min; x <= max; x += 0.1)
+    for (double x = min; x <= max; x += delta)
     {
         auto diff = f(x) - g(x);
         std::cout << diff << std::endl;
