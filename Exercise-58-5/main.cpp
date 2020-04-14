@@ -2,6 +2,11 @@
 #include <cmath>
 #include <iostream>
 
+static double cot(double x)
+{
+    return (1.0 / tan(x));
+}
+
 static double f(double theta)
 {
     return (pow(1.0 + cot(theta), 2.0) + pow(1.0 - cot(theta), 2.0));
